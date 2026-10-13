@@ -1,4 +1,4 @@
-# Where is the car parked? 
+# Where is the car parked?
 
 A simple React web app for sharing the parked car location. Open the link, tap **Update location**, and the app saves the browser GPS position to the backend. Anyone else with the page open sees the saved address refresh automatically.
 
@@ -23,7 +23,7 @@ A simple React web app for sharing the parked car location. Open the link, tap *
 
 ---
 
-## Running the frontend
+## Running locally
 
 Start the backend first:
 
@@ -43,12 +43,18 @@ npm install
 npm run dev
 ```
 
-In development, Vite proxies `/api` to `http://127.0.0.1:8000`.
+## Build
 
-Set `VITE_BACKEND_URL` in `frontend/.env` to point at a deployed backend instead:
+From `frontend`:
+
+```bash
+npm run build
+```
+
+## Configuration
+
+In development, Vite proxies `/api` to `http://127.0.0.1:8000`. To use a deployed backend instead, create `frontend/.env`:
 
 ```bash
 VITE_BACKEND_URL=https://your-backend.example.com
 ```
-
-
